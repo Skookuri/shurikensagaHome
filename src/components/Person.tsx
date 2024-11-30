@@ -10,9 +10,11 @@ interface PersonProps {
     imgLink: string; // img should be a string, representing the URL or path of the image
     roles: string[]; // Roles as an array of strings
     links: string[]; // Links as an array of strings
+    year: number;
+    major: string;
 }
 
-const Person = ({ name, imgLink, roles, links }: PersonProps) => {
+const Person = ({ name, imgLink, roles, links, year, major }: PersonProps) => {
     return (
         <div className="flex flex-col p-8 border-2 bg-warmPurp-500 items-center justify-center rounded-3xl max-w-[280px] w-[280px]">
             {/* Display Image */}
@@ -23,7 +25,11 @@ const Person = ({ name, imgLink, roles, links }: PersonProps) => {
             />
 
             {/* Display Name */}
-            <div>{name}</div>
+            <div className="font-bold text-2xl">{name}</div>
+            
+            {/* Background */}
+            <div className="italic">Tufts University {year}</div>
+            <div className="italic">{major}</div>
 
             {/* Render Roles */}
             <div className="mt-2 text-center">

@@ -101,7 +101,7 @@ export default function Homepage() {
                         <div ref={titleRef} className="p-4 text-[200px]">ShurikenSaga</div>
                         <div className="flex flex-row gap-6">
                             <button onClick={() => handleScroll("gamePlay")} className="p-2 border-2 border-yt bg-yt rounded-full text-warmPurp-700 text-[50px] hover:bg-warmPurp-700 hover:text-yt duration-500 max-w-fit">Play Now</button>
-                            <button onClick={() => handleScroll("trailer")} className="p-2 border-2 border-yt bg-transparent rounded-full text-yt text-[50px] hover:bg-warmPurp-700 hover:text-yt duration-500 max-w-fit flex flex-row align-center justify-center">
+                            <button onClick={() => handleScroll("trailer")} className="p-2 border-2 border-yt bg-transparent rounded-full text-yt text-[50px] hover:bg-warmPurp-700 hover:text-yt duration-500 max-w-fit flex flex-row items-center justify-center">
                                 <FaPlay/>
                                 <div>Watch Trailer</div>
                             </button>
@@ -109,6 +109,7 @@ export default function Homepage() {
                     </div>  
                 </section>
                 <section id="trailer" className="p-10 flex flex-col justify-center items-center min-h-screen bg-warmPurp-500 text-lg text-yt">
+                    <iframe width="1000" height="500" src="https://www.youtube.com/embed/S3xAeTmsJfg?si=IEV-DkBDKxXMNaJB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     <div>You play as a fallen ninja, the last survivor of your clan after they were massacred in a brutal war (ikusa) instigated by a tyrannical shogun overlord in Warring States period Japan. Stripped of everything you held dear, you’re haunted by the loss and determined to bring justice to those responsible. In search of purpose and peace, you visit a secluded temple to offer prayers for strength and guidance. But as you kneel, memories of your family drive you to a new resolve: you won’t find peace until the shogun is defeated, and your family’s legacy is reclaimed. </div>
                 </section>
                 <section id="team" className="p-10 bg-warmPurp-600 z-10 text-yt">
@@ -116,6 +117,8 @@ export default function Homepage() {
                     <div className="flex flex-row flex-wrap place-content-around">
                         <Person
                             name="Alyssa Williams"
+                            year={2025}
+                            major="Computer Science / CBS"
                             imgLink="https://media-be.chewy.com/wp-content/uploads/2024/07/08103649/facts-about-ferrets-1024x615.jpg"
                             roles={["Art", "Code", "Website", "Project Management"]}
                             links={[
@@ -125,6 +128,8 @@ export default function Homepage() {
                         />
                         <Person
                             name="Massimo Bottari"
+                            year={2026}
+                            major="Computer Science"
                             imgLink="https://media-be.chewy.com/wp-content/uploads/2024/07/08103649/facts-about-ferrets-1024x615.jpg"
                             roles={["Code", "Level Design"]}
                             links={[
@@ -134,12 +139,16 @@ export default function Homepage() {
                         />
                         <Person
                             name="Lance Haugh"
+                            year={2026}
+                            major="Computer Science"
                             imgLink="https://media-be.chewy.com/wp-content/uploads/2024/07/08103649/facts-about-ferrets-1024x615.jpg"
                             roles={["Code", "Level Design"]}
                             links={["https://github.com/lhaugh01"]}
                         />
                         <Person
                             name="Boston-Blue Giovannini"
+                            year={2026}
+                            major="Computer Science"
                             imgLink="https://media-be.chewy.com/wp-content/uploads/2024/07/08103649/facts-about-ferrets-1024x615.jpg"
                             roles={["Code", "Concept Design"]}
                             links={["https://github.com/untitled-Terran"]}
@@ -157,7 +166,6 @@ export default function Homepage() {
                             roles={["Music", "SFX"]}
                             links={["https://www.wavyrn.com", "https://www.marcyumusic.com"]}
                         />
-                        
                     </div>
                 </section>
                 <section id="gamePlay"
