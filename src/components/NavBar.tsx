@@ -20,20 +20,24 @@ const NavBar = ({ sectionNames, sectionIDs }: NavBarProps) => {
     };
 
     return (
-        <nav className="fixed font-normal">
-            <ul className="flex space-x-4">
-                {sectionNames.map((sectionName, index) => (
-                    <li key={index}>
-                        <button
-                            onClick={() => handleScroll(sectionIDs[index])}
-                            className="hover:underline"
-                        >
-                            {sectionName}
-                        </button>
-                    </li>
-                ))}
-            </ul>
-        </nav>
+        <div className="fixed top-0 left-0 w-full p-6 bg-transparent z-50 flex justify-between items-center">
+            <h2 className="text-2xl text-white font-semibold">ShurikenSaga</h2>
+            <nav className="flex space-x-8">
+                <ul className="flex space-x-8">
+                    {sectionNames.map((sectionName, index) => (
+                        <li key={index}>
+                            <button
+                                onClick={() => handleScroll(sectionIDs[index])}
+                                className="text-white text-lg font-medium relative group"
+                            >
+                                {sectionName}
+                                <span className="absolute bottom-0 left-0 w-full h-[2px] bg-white scale-x-0 group-hover:scale-x-100 transition-transform origin-right"></span>
+                            </button>
+                        </li>
+                    ))}
+                </ul>
+            </nav>
+        </div>
     );
 };
 
