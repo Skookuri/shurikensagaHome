@@ -111,7 +111,7 @@ export default function Homepage() {
                     </div>  
                 </section>
                 <section id="trailer" className="p-10 flex flex-col justify-center items-center min-h-screen bg-warmPurp-500 text-lg text-yt">
-                    <iframe className="lazy player-ratio" width="1000" height="500" src="" data-src="https://www.youtube.com/embed/S3xAeTmsJfg?si=IEV-DkBDKxXMNaJB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe className="lazy player-ratio" width="1000" height="500" src="" data-src="https://www.youtube.com/embed/S3xAeTmsJfg?si=IEV-DkBDKxXMNaJB" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
                     <div>You play as a fallen ninja, the last survivor of your clan after they were massacred in a brutal war (ikusa) instigated by a tyrannical shogun overlord in Warring States period Japan. Stripped of everything you held dear, you’re haunted by the loss and determined to bring justice to those responsible. In search of purpose and peace, you visit a secluded temple to offer prayers for strength and guidance. But as you kneel, memories of your family drive you to a new resolve: you won’t find peace until the shogun is defeated, and your family’s legacy is reclaimed. </div>
                 </section>
                 <section id="team" className="p-10 bg-warmPurp-600 z-10 text-yt">
@@ -164,6 +164,8 @@ export default function Homepage() {
                         <iframe className="rounded-sm max-w-[700px]" src="https://open.spotify.com/embed/track/3fxzqmi2j5iXCBYQK4T6EL?utm_source=generator" width="100%" height="152" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                         <Person
                             name="Marc Yu"
+                            year={2}
+                            major=""
                             imgLink="https://marcyumusic.com/static/media/marc_yu.2aa35e4a782d9a8ef23a.jpeg"
                             roles={["Music", "SFX"]}
                             links={["https://www.wavyrn.com", "https://www.marcyumusic.com"]}
