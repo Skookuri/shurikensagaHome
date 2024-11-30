@@ -7,8 +7,8 @@ import Title from "./Title";
 import { FaPlay } from "react-icons/fa";
 
 export default function Homepage() {
-    const sectionNames = ["HOME", "STORY", "MEET THE TEAM", "OUR COMPOSER", "PLAY GAME"];
-    const sectionIDs = ["hero", "story", "team", "composer", "gamePlay"];
+    const sectionNames = ["HOME", "TRAILER", "MEET THE TEAM", "OUR COMPOSER", "PLAY GAME"];
+    const sectionIDs = ["hero", "trailer", "team", "composer", "gamePlay"];
 
     const skyRef = useRef<HTMLImageElement>(null);
     const moonRef = useRef<HTMLImageElement>(null);
@@ -65,9 +65,7 @@ export default function Homepage() {
         <>
             <NavBar sectionNames={sectionNames} sectionIDs={sectionIDs} />
             <div className="flex flex-col justify-center bg-coolPurp-700">
-                <section
-                    id="hero"
-                    className="relative p-10 flex flex-col justify-center items-center min-h-screen bg-coolPurp-700 overflow-hidden bg-gradient-to-b from-warmPurp-700 via-transparent to-transparent">
+                <section id="hero" className="relative p-10 flex flex-col justify-center items-center min-h-screen bg-coolPurp-700 overflow-hidden bg-gradient-to-b from-warmPurp-700 via-transparent to-transparent">
                     <img
                         ref={moonRef}
                         className="absolute top-48 -left-96 w-full h-auto z-1"
@@ -103,14 +101,16 @@ export default function Homepage() {
                         <div ref={titleRef} className="p-4 text-[200px]">ShurikenSaga</div>
                         <div className="flex flex-row gap-6">
                             <button onClick={() => handleScroll("gamePlay")} className="p-2 border-2 border-yt bg-yt rounded-full text-warmPurp-700 text-[50px] hover:bg-warmPurp-700 hover:text-yt duration-500 max-w-fit">Play Now</button>
-                            <button onClick={() => handleScroll("gamePlay")} className="p-2 border-2 border-yt bg-transparent rounded-full text-yt text-[50px] hover:bg-warmPurp-700 hover:text-yt duration-500 max-w-fit flex flex-row align-center justify-center"><FaPlay/>Watch Trailer</button>
+                            <button onClick={() => handleScroll("trailer")} className="p-2 border-2 border-yt bg-transparent rounded-full text-yt text-[50px] hover:bg-warmPurp-700 hover:text-yt duration-500 max-w-fit flex flex-row align-center justify-center">
+                                <FaPlay/>
+                                <div>Watch Trailer</div>
+                            </button>
                         </div>
                     </div>  
                 </section>
-                <section id="story" className="p-10 flex flex-col justify-center items-center min-h-screen bg-warmPurp-600 text-lg text-yt">
+                <section id="trailer" className="p-10 flex flex-col justify-center items-center min-h-screen bg-warmPurp-500 text-lg text-yt">
                     <div>You play as a fallen ninja, the last survivor of your clan after they were massacred in a brutal war (ikusa) instigated by a tyrannical shogun overlord in Warring States period Japan. Stripped of everything you held dear, you’re haunted by the loss and determined to bring justice to those responsible. In search of purpose and peace, you visit a secluded temple to offer prayers for strength and guidance. But as you kneel, memories of your family drive you to a new resolve: you won’t find peace until the shogun is defeated, and your family’s legacy is reclaimed. </div>
                 </section>
-
                 <section id="team" className="p-10 bg-warmPurp-600 z-10 text-yt">
                     <Title titleText="MEET THE TEAM" />
                     <div className="flex flex-row flex-wrap place-content-around">
