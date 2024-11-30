@@ -175,7 +175,7 @@ export default function Homepage() {
                 <section id="gamePlay"
                     className="z-10 p-10 flex flex-col justify-center items-center min-h-screen bg-coolPurp-700">
                     <div className="p-5">
-                        {/* <iframe frameborder="0" src="https://itch.io/embed-upload/12101564?color=885d9a" allowfullscreen="" width="1280" height="760"><a href="https://shuriken-saga.itch.io/shuriken-saga">Play Shuriken Saga on itch.io</a></iframe> */}
+                        <iframe src="https://itch.io/embed-upload/12101564?color=885d9a" width="1280" height="760"><a href="https://shuriken-saga.itch.io/shuriken-saga">Play Shuriken Saga on itch.io</a></iframe>
                     </div>
                 </section>
             </div>
