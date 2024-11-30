@@ -7,8 +7,8 @@ import Title from "./Title";
 import { FaPlay } from "react-icons/fa";
 
 export default function Homepage() {
-    const sectionNames = ["HOME", "PLAY GAME", "MEET THE TEAM", "OUR COMPOSER"];
-    const sectionIDs = ["hero", "gamePlay", "team", "composer"];
+    const sectionNames = ["HOME", "STORY", "MEET THE TEAM", "OUR COMPOSER", "PLAY GAME"];
+    const sectionIDs = ["hero", "story", "team", "composer", "gamePlay"];
 
     const skyRef = useRef<HTMLImageElement>(null);
     const moonRef = useRef<HTMLImageElement>(null);
@@ -41,13 +41,13 @@ export default function Homepage() {
                 mountainRef.current.style.transform = `translateY(${scrollY * -0.5}px)`;
             }
             if (fujiRef.current) {
-                fujiRef.current.style.transform = `translateY(${scrollY * -1.25}px)`;
+                fujiRef.current.style.transform = `translateY(${scrollY * 1.25}px)`;
             }
             if (riverRef.current) {
                 riverRef.current.style.transform = `translateY(${scrollY * -0.25}px)`;
             }
             if (ninjaRef.current) {
-                ninjaRef.current.style.transform = `translateY(${scrollY * -0.5}px)`;
+                ninjaRef.current.style.transform = `translateY(${scrollY * -0.25}px)`;
             }
 
             if (titleRef.current) {
@@ -105,19 +105,8 @@ export default function Homepage() {
                             <button onClick={() => handleScroll("gamePlay")} className="p-2 border-2 border-yt bg-yt rounded-full text-warmPurp-700 text-[50px] hover:bg-warmPurp-700 hover:text-yt duration-500 max-w-fit">Play Now</button>
                             <button onClick={() => handleScroll("gamePlay")} className="p-2 border-2 border-yt bg-transparent rounded-full text-yt text-[50px] hover:bg-warmPurp-700 hover:text-yt duration-500 max-w-fit flex flex-row align-center justify-center"><FaPlay/>Watch Trailer</button>
                         </div>
-                    </div>
-                    
-                    
-                    
+                    </div>  
                 </section>
-
-                <section id="gamePlay"
-                    className="z-10 p-10 flex flex-col justify-center items-center min-h-screen bg-coolPurp-700">
-                    <div className="p-5">
-                        {/* <iframe frameborder="0" src="https://itch.io/embed-upload/12101564?color=885d9a" allowfullscreen="" width="1280" height="760"><a href="https://shuriken-saga.itch.io/shuriken-saga">Play Shuriken Saga on itch.io</a></iframe> */}
-                    </div>
-                </section>
-
                 <section id="story" className="p-10 flex flex-col justify-center items-center min-h-screen bg-warmPurp-600 text-lg text-yt">
                     <div>You play as a fallen ninja, the last survivor of your clan after they were massacred in a brutal war (ikusa) instigated by a tyrannical shogun overlord in Warring States period Japan. Stripped of everything you held dear, you’re haunted by the loss and determined to bring justice to those responsible. In search of purpose and peace, you visit a secluded temple to offer prayers for strength and guidance. But as you kneel, memories of your family drive you to a new resolve: you won’t find peace until the shogun is defeated, and your family’s legacy is reclaimed. </div>
                 </section>
@@ -137,7 +126,7 @@ export default function Homepage() {
                         <Person
                             name="Massimo Bottari"
                             imgLink="https://media-be.chewy.com/wp-content/uploads/2024/07/08103649/facts-about-ferrets-1024x615.jpg"
-                            roles={["Code"]}
+                            roles={["Code", "Level Design"]}
                             links={[
                                 "https://www.linkedin.com/in/massimo-bottari-39339a2aa/",
                                 "https://github.com/Masmooo",
@@ -146,13 +135,13 @@ export default function Homepage() {
                         <Person
                             name="Lance Haugh"
                             imgLink="https://media-be.chewy.com/wp-content/uploads/2024/07/08103649/facts-about-ferrets-1024x615.jpg"
-                            roles={["Code"]}
+                            roles={["Code", "Level Design"]}
                             links={["https://github.com/lhaugh01"]}
                         />
                         <Person
                             name="Boston-Blue Giovannini"
                             imgLink="https://media-be.chewy.com/wp-content/uploads/2024/07/08103649/facts-about-ferrets-1024x615.jpg"
-                            roles={["Code"]}
+                            roles={["Code", "Concept Design"]}
                             links={["https://github.com/untitled-Terran"]}
                         />
                     </div>
@@ -169,6 +158,12 @@ export default function Homepage() {
                             links={["https://www.wavyrn.com", "https://www.marcyumusic.com"]}
                         />
                         
+                    </div>
+                </section>
+                <section id="gamePlay"
+                    className="z-10 p-10 flex flex-col justify-center items-center min-h-screen bg-coolPurp-700">
+                    <div className="p-5">
+                        {/* <iframe frameborder="0" src="https://itch.io/embed-upload/12101564?color=885d9a" allowfullscreen="" width="1280" height="760"><a href="https://shuriken-saga.itch.io/shuriken-saga">Play Shuriken Saga on itch.io</a></iframe> */}
                     </div>
                 </section>
             </div>
