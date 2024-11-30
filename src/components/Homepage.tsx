@@ -5,6 +5,7 @@ import NavBar from "./NavBar";
 import Person from "./Person";
 import Title from "./Title";
 import { FaPlay } from "react-icons/fa";
+import LazyLoad from "vanilla-lazyload";
 
 export default function Homepage() {
     const sectionNames = ["HOME", "TRAILER", "MEET THE TEAM", "OUR COMPOSER", "PLAY GAME"];
@@ -14,11 +15,9 @@ export default function Homepage() {
     const moonRef = useRef<HTMLImageElement>(null);
     const mountainRef = useRef<HTMLImageElement>(null);
     const fujiRef = useRef<HTMLImageElement>(null);
-    //const mountainsRef = useRef<HTMLImageElement>(null);
     const riverRef = useRef<HTMLImageElement>(null);
-    // const flowersRef = useRef<HTMLImageElement>(null);
     const ninjaRef = useRef<HTMLImageElement>(null);
-    const titleRef = useRef<HTMLImageElement>(null);
+    const titleRef = useRef<HTMLDivElement>(null);
 
     const handleScroll = (sectionID: string) => {
         const section = document.getElementById(sectionID);
@@ -28,6 +27,8 @@ export default function Homepage() {
     };
 
     useEffect(() => {
+        const lazyLoadInstance = new LazyLoad();
+
         const handleParallax = () => {
             const scrollY = window.scrollY;
 
@@ -49,15 +50,16 @@ export default function Homepage() {
             if (ninjaRef.current) {
                 ninjaRef.current.style.transform = `translateY(${scrollY * -0.25}px)`;
             }
-
             if (titleRef.current) {
                 titleRef.current.style.transform = `translateY(${scrollY * -1.7}px)`;
             }
         };
 
         window.addEventListener("scroll", handleParallax);
+
         return () => {
             window.removeEventListener("scroll", handleParallax);
+            lazyLoadInstance.destroy();
         };
     }, []);
 
@@ -109,7 +111,7 @@ export default function Homepage() {
                     </div>  
                 </section>
                 <section id="trailer" className="p-10 flex flex-col justify-center items-center min-h-screen bg-warmPurp-500 text-lg text-yt">
-                    <iframe width="1000" height="500" src="https://www.youtube.com/embed/S3xAeTmsJfg?si=IEV-DkBDKxXMNaJB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe className="lazy player-ratio" width="1000" height="500" src="" data-src="https://www.youtube.com/embed/S3xAeTmsJfg?si=IEV-DkBDKxXMNaJB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     <div>You play as a fallen ninja, the last survivor of your clan after they were massacred in a brutal war (ikusa) instigated by a tyrannical shogun overlord in Warring States period Japan. Stripped of everything you held dear, you’re haunted by the loss and determined to bring justice to those responsible. In search of purpose and peace, you visit a secluded temple to offer prayers for strength and guidance. But as you kneel, memories of your family drive you to a new resolve: you won’t find peace until the shogun is defeated, and your family’s legacy is reclaimed. </div>
                 </section>
                 <section id="team" className="p-10 bg-warmPurp-600 z-10 text-yt">
