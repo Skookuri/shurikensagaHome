@@ -20,7 +20,7 @@ const NavBar = ({ sectionNames, sectionIDs }: NavBarProps) => {
     };
 
     return (
-        <div className="fixed top-0 left-0 w-full p-6 bg-transparent z-50 flex justify-between items-center">
+        <div className="fixed top-0 left-0 w-full p-6 bg-transparent z-50 flex flex-wrap justify-between items-center">
             <h2 className="text-2xl text-yt font-semibold">ShurikenSaga</h2>
             <nav className="flex space-x-8">
                 <ul className="flex space-x-8">

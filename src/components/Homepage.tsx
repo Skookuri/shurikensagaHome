@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import NavBar from "./NavBar";
 import Person from "./Person";
 import Title from "./Title";
+import { FaPlay } from "react-icons/fa";
 
 export default function Homepage() {
     const sectionNames = ["HOME", "PLAY GAME", "MEET THE TEAM", "OUR COMPOSER"];
@@ -15,7 +16,7 @@ export default function Homepage() {
     const fujiRef = useRef<HTMLImageElement>(null);
     //const mountainsRef = useRef<HTMLImageElement>(null);
     const riverRef = useRef<HTMLImageElement>(null);
-    const flowersRef = useRef<HTMLImageElement>(null);
+    // const flowersRef = useRef<HTMLImageElement>(null);
     const ninjaRef = useRef<HTMLImageElement>(null);
     const titleRef = useRef<HTMLImageElement>(null);
 
@@ -34,13 +35,13 @@ export default function Homepage() {
                 skyRef.current.style.transform = `translateX(${scrollY * 0.25}px)`;
             }
             if (moonRef.current) {
-                moonRef.current.style.transform = `translateY(${scrollY * -0.75}px)`;
+                moonRef.current.style.transform = `translateY(${scrollY * -1.75}px)`;
             }
             if (mountainRef.current) {
                 mountainRef.current.style.transform = `translateY(${scrollY * -0.5}px)`;
             }
             if (fujiRef.current) {
-                fujiRef.current.style.transform = `translateY(${scrollY * 0.25}px)`;
+                fujiRef.current.style.transform = `translateY(${scrollY * -1.25}px)`;
             }
             if (riverRef.current) {
                 riverRef.current.style.transform = `translateY(${scrollY * -0.25}px)`;
@@ -63,13 +64,13 @@ export default function Homepage() {
     return (
         <>
             <NavBar sectionNames={sectionNames} sectionIDs={sectionIDs} />
-            <div className="flex flex-col justify-center">
+            <div className="flex flex-col justify-center bg-coolPurp-700">
                 <section
                     id="hero"
-                    className="relative p-10 flex flex-col justify-center items-center min-h-screen bg-coolPurp-700 overflow-hidden">
+                    className="relative p-10 flex flex-col justify-center items-center min-h-screen bg-coolPurp-700 overflow-hidden bg-gradient-to-b from-warmPurp-700 via-transparent to-transparent">
                     <img
                         ref={moonRef}
-                        className="absolute top-32 left-0 w-full h-auto z-1"
+                        className="absolute top-48 -left-96 w-full h-auto z-1"
                         src="https://media.discordapp.net/attachments/882553858788843604/1312284411395571782/art_large_moon.png?ex=674bef98&is=674a9e18&hm=1543aed28618842d431fbee6e3076cc1e6d439b710a7553c37135e80ad76fc89&=&format=webp&quality=lossless&width=1170&height=1170"
                         alt="Moon"
                     />
@@ -79,48 +80,51 @@ export default function Homepage() {
                         src="https://media.discordapp.net/attachments/882553858788843604/1312284438310289408/art_large_mountain.png?ex=674bef9f&is=674a9e1f&hm=d51e58c1a8b0ab172dc712c94da961830c18ad2cda249b297c363fa8d733ddfc&=&format=webp&quality=lossless&width=1170&height=1170"
                         alt="Mountain"
                     />
-                    <div ref={titleRef} className="text-yt top-10 absolute z-3 flex flex-col items-center">
-                        <div ref={titleRef} className="p-4 text-[200px]">ShurikenSaga</div>
-                        <button onClick={() => handleScroll("gamePlay")} className="p-2 border-2 border-yt rounded-full text-yt text-[50px] hover:bg-yt hover:text-coolPurp-700 duration-500 max-w-fit">Play Now</button>
-                    </div>
                     <img
                         ref={fujiRef}
-                        className="absolute top-0 left-0 w-full h-auto z-4"
+                        className="absolute top-0 left-48 w-full h-auto z-3"
                         src="https://media.discordapp.net/attachments/882553858788843604/1312284472938598511/art_large_fuji.png?ex=674befa7&is=674a9e27&hm=dfe66247abfe7577f4b69a22c2d9ef1707a613244d65408e88a6054f290d32d3&=&format=webp&quality=lossless&width=1170&height=1170"
                         alt="Mt Fuji"
                     />
                     <img
                         ref={riverRef}
-                        className="absolute top-86 left-0 w-full h-auto z-6"
+                        className="absolute top-86 left-0 w-full h-auto z-4"
                         src="https://media.discordapp.net/attachments/882553858788843604/1312284650022113340/art_large_water.png?ex=674befd1&is=674a9e51&hm=ef310b307c836995000a54c431438569504c36be9c6bd5adf22c77d9fbd3b36b&=&format=webp&quality=lossless&width=1170&height=1170"
                         alt="River"
                     />
-                    {/* <img
-                        ref={flowersRef}
-                        className="absolute top-0 left-0 w-full h-auto z-7"
-                        src="https://media.discordapp.net/attachments/882553858788843604/1312284675934257262/art_large_flowers.png?ex=674befd7&is=674a9e57&hm=44a04ad4e7974783bcb12d3c9b177dce462657b08e1822b8aef8cebdc7deb2fa&=&format=webp&quality=lossless&width=1170&height=1170"
-                        alt="Flowers"
-                    /> */}
                     <img
                         ref={ninjaRef}
-                        className="absolute top-86 left-0 w-full h-auto z-8"
+                        className="absolute top-86 left-0 w-full h-auto z-5"
                         src="https://media.discordapp.net/attachments/882553858788843604/1312284993057329173/art_large_ninja.png?ex=674bf023&is=674a9ea3&hm=17a7c5d7368ccd6f4e536401827a3339aa4146c7e06dc5177c45b80d53a90c10&=&format=webp&quality=lossless&width=1170&height=1170"
                         alt="Ninja"
                     />
+                    
+                    <div ref={titleRef} className="text-yt top-10 absolute z-6 flex flex-col items-center">
+                        <div ref={titleRef} className="p-4 text-[200px]">ShurikenSaga</div>
+                        <div className="flex flex-row gap-6">
+                            <button onClick={() => handleScroll("gamePlay")} className="p-2 border-2 border-yt bg-yt rounded-full text-warmPurp-700 text-[50px] hover:bg-warmPurp-700 hover:text-yt duration-500 max-w-fit">Play Now</button>
+                            <button onClick={() => handleScroll("gamePlay")} className="p-2 border-2 border-yt bg-transparent rounded-full text-yt text-[50px] hover:bg-warmPurp-700 hover:text-yt duration-500 max-w-fit flex flex-row align-center justify-center"><FaPlay/>Watch Trailer</button>
+                        </div>
+                    </div>
+                    
+                    
+                    
                 </section>
 
-                <section
-                    id="gamePlay"
-                    className="z-10 p-10 flex flex-col justify-center items-center min-h-screen bg-gradient-to-t from-warmPurp-700 to-transparent"
-                >
+                <section id="gamePlay"
+                    className="z-10 p-10 flex flex-col justify-center items-center min-h-screen bg-coolPurp-700">
                     <div className="p-5">
-                        {/* <iframe frameborder="0" src="https://itch.io/embed-upload/12101564?color=333333" allowfullscreen="" width="1280" height="760"><a href="https://shuriken-saga.itch.io/shuriken-saga">Play Shuriken Saga on itch.io</a></iframe> */}
+                        {/* <iframe frameborder="0" src="https://itch.io/embed-upload/12101564?color=885d9a" allowfullscreen="" width="1280" height="760"><a href="https://shuriken-saga.itch.io/shuriken-saga">Play Shuriken Saga on itch.io</a></iframe> */}
                     </div>
+                </section>
+
+                <section id="story" className="p-10 flex flex-col justify-center items-center min-h-screen bg-warmPurp-600 text-lg text-yt">
+                    <div>You play as a fallen ninja, the last survivor of your clan after they were massacred in a brutal war (ikusa) instigated by a tyrannical shogun overlord in Warring States period Japan. Stripped of everything you held dear, you’re haunted by the loss and determined to bring justice to those responsible. In search of purpose and peace, you visit a secluded temple to offer prayers for strength and guidance. But as you kneel, memories of your family drive you to a new resolve: you won’t find peace until the shogun is defeated, and your family’s legacy is reclaimed. </div>
                 </section>
 
                 <section id="team" className="p-10 bg-warmPurp-600 z-10 text-yt">
                     <Title titleText="MEET THE TEAM" />
-                    <div className="flex flex-row place-content-around border-green-500 border-2">
+                    <div className="flex flex-row flex-wrap place-content-around">
                         <Person
                             name="Alyssa Williams"
                             imgLink="https://media-be.chewy.com/wp-content/uploads/2024/07/08103649/facts-about-ferrets-1024x615.jpg"
@@ -154,15 +158,17 @@ export default function Homepage() {
                     </div>
                 </section>
 
-                <section id="composer" className="min-h-screen bg-[#13121e] z-10 text-yt">
+                <section id="composer" className="min-h-screen bg-coolPurp-700 z-10 text-yt">
                     <Title titleText="OUR COMPOSER" />
-                    <div className="flex justify-center">
+                    <div className="flex flex-col justify-center items-center">
+                        <iframe className="rounded-sm max-w-[700px]" src="https://open.spotify.com/embed/track/3fxzqmi2j5iXCBYQK4T6EL?utm_source=generator" width="100%" height="152" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                         <Person
                             name="Marc Yu"
                             imgLink="https://marcyumusic.com/static/media/marc_yu.2aa35e4a782d9a8ef23a.jpeg"
                             roles={["Music", "SFX"]}
                             links={["https://www.wavyrn.com", "https://www.marcyumusic.com"]}
                         />
+                        
                     </div>
                 </section>
             </div>
