@@ -21,7 +21,7 @@ const Person = ({ name, imgLink, roles, links, year, major }: PersonProps) => {
             <img
                 src={imgLink}
                 alt={`${name}'s picture`}
-                className="w-24 h-24 rounded-full object-cover mb-4"
+                className="w-24 h-24 rounded-full object-cover object-center mb-4"
             />
 
             {/* Display Name */}

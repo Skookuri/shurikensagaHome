@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import NavBar from "./NavBar";
 import Person from "./Person";
 import Title from "./Title";
+import Gallery from "./Gallery";
 import { FaPlay } from "react-icons/fa";
 import LazyLoad from "vanilla-lazyload";
 import logoImg from "/src/images/logo.png";
@@ -15,6 +16,9 @@ import moonImg from "/src/images/art_large_moon.png";
 import mtnImg from "/src/images/art_large_mountain.png";
 import ninjaImg from "/src/images/art_large_ninja.png";
 import riverImg from "/src/images/art_large_water.png";
+
+import massimo from "/src/images/massimo.jpg";
+import alyssa from "/src/images/alyssa.png";
 
 export default function Homepage() {
     const sectionNames = ["HOME", "TRAILER", "MEET THE TEAM", "OUR COMPOSER", "PLAY GAME"];
@@ -131,12 +135,13 @@ export default function Homepage() {
                 </section>
                 <section id="team" className="p-10 flex flex-col justify-center bg-warmPurp-600 z-10 text-yt min-h-screen">
                     <Title titleText="MEET THE TEAM" />
+                    <Gallery/>
                     <div className="flex flex-row flex-wrap place-content-around">
                         <Person
                             name="Alyssa Williams"
                             year={2025}
                             major="Computer Science / CBS"
-                            imgLink="https://media-be.chewy.com/wp-content/uploads/2024/07/08103649/facts-about-ferrets-1024x615.jpg"
+                            imgLink={alyssa}
                             roles={["Art", "Code", "Website", "Project Management"]}
                             links={[
                                 "https://www.linkedin.com/in/wiriamuzu/",
@@ -147,7 +152,7 @@ export default function Homepage() {
                             name="Massimo Bottari"
                             year={2027}
                             major="Computer Science"
-                            imgLink="https://media-be.chewy.com/wp-content/uploads/2024/07/08103649/facts-about-ferrets-1024x615.jpg"
+                            imgLink={massimo}
                             roles={["Code", "Level Design"]}
                             links={[
                                 "https://www.linkedin.com/in/massimo-bottari-39339a2aa/",
@@ -173,7 +178,7 @@ export default function Homepage() {
                     </div>
                 </section>
 
-                <section id="composer" className="flex flex-col justify-center min-h-screen bg-coolPurp-700 z-10 text-yt">
+                <section id="composer" className="p-10 flex flex-col justify-center min-h-screen bg-coolPurp-700 z-10 text-yt">
                     <Title titleText="OUR COMPOSER" />
                     <div className="flex flex-col justify-center items-center">
                         <iframe className="rounded-sm max-w-[700px]" src="https://open.spotify.com/embed/track/3fxzqmi2j5iXCBYQK4T6EL?utm_source=generator" width="100%" height="152" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
