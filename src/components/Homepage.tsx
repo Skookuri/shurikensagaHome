@@ -6,6 +6,15 @@ import Person from "./Person";
 import Title from "./Title";
 import { FaPlay } from "react-icons/fa";
 import LazyLoad from "vanilla-lazyload";
+import logoImg from "/src/images/logo.png";
+// import bgImg from "/src/images/art_large_background.png"
+// import flowersImg from "/src/images/art_large_flowers.png" 
+// import mtnsImg from "/src/images/art_large_mountains.png"
+import fujiImg from "/src/images/art_large_fuji.png";
+import moonImg from "/src/images/art_large_moon.png";
+import mtnImg from "/src/images/art_large_mountain.png";
+import ninjaImg from "/src/images/art_large_ninja.png";
+import riverImg from "/src/images/art_large_water.png";
 
 export default function Homepage() {
     const sectionNames = ["HOME", "TRAILER", "MEET THE TEAM", "OUR COMPOSER", "PLAY GAME"];
@@ -71,39 +80,45 @@ export default function Homepage() {
                     <img
                         ref={moonRef}
                         className="absolute top-48 -left-96 w-full h-auto z-1"
-                        src="https://media.discordapp.net/attachments/1283198836004749454/1313645976019406849/art_large_moon.png?ex=6750e3a7&is=674f9227&hm=486043f2c2525b571c8eb6a0b30adfc9a467e1e09804dbba11356f7f9bec6736&=&format=webp&quality=lossless&width=1170&height=1170"
+                        src={moonImg}
                         alt="Moon"
                     />
                     <img
                         ref={mountainRef}
                         className="absolute top-0 left-0 w-full h-auto z-2"
-                        src="https://media.discordapp.net/attachments/1283198836004749454/1313645976702943372/art_large_mountain.png?ex=6750e3a7&is=674f9227&hm=a14e76ab0ad5e4b644bcfa3599a2688787ed424299cce719b5ca784ee7cc36c6&=&format=webp&quality=lossless&width=1170&height=1170"
+                        src={mtnImg}
                         alt="Mountain"
                     />
                     <img
                         ref={fujiRef}
                         className="absolute top-0 left-48 w-full h-auto z-3"
-                        src="https://media.discordapp.net/attachments/1283198836004749454/1313645976388636722/art_large_fuji.png?ex=6750e3a7&is=674f9227&hm=dee541ec16e9975c17d5cadaa13cd3db92159b5a0e2b87d47f9fc1299802ba49&=&format=webp&quality=lossless&width=1170&height=1170"
+                        src={fujiImg}
                         alt="Mt Fuji"
                     />
                     <img
                         ref={riverRef}
                         className="absolute top-86 left-0 w-full h-auto z-4"
-                        src="https://media.discordapp.net/attachments/1283198836004749454/1313645977311121438/art_large_water.png?ex=6750e3a7&is=674f9227&hm=dae82afbc38f21b6ddd367673a8f56797b57f718552f35bef5ea4bc6226d2a61&=&format=webp&quality=lossless&width=1170&height=1170"
+                        src={riverImg}
                         alt="River"
                     />
                     <img
                         ref={ninjaRef}
                         className="absolute top-86 left-0 w-full h-auto z-5"
-                        src="https://media.discordapp.net/attachments/1283198836004749454/1313645977005064232/art_large_ninja.png?ex=6750e3a7&is=674f9227&hm=30af10ef7f9c54291033372bb3d00d0fdd0d1fdeab2bc8122dbf608009a35866&=&format=webp&quality=lossless&width=1170&height=1170"
+                        src={ninjaImg}
                         alt="Ninja"
                     />
                     
-                    <div ref={titleRef} className="text-yt top-10 absolute z-6 flex flex-col items-center">
-                        <div ref={titleRef} className="p-4 text-[200px]">ShurikenSaga</div>
-                        <div className="flex flex-row gap-6">
+                    <div ref={titleRef} className="text-yt top-12 absolute flex flex-col items-center">
+                        <img
+                            src={logoImg}
+                            alt="Logo"
+                            width="1200px"
+                            height="auto"
+                            className="z-6"
+                        />
+                        <div className="flex flex-row gap-6 z-7 -mt-20">
                             <button onClick={() => handleScroll("gamePlay")} className="p-2 border-2 border-yt bg-yt rounded-full text-warmPurp-700 text-[50px] hover:bg-warmPurp-700 hover:text-yt duration-500 max-w-fit">Play Now</button>
-                            <button onClick={() => handleScroll("trailer")} className="p-2 border-2 border-yt bg-transparent rounded-full text-yt text-[50px] hover:bg-warmPurp-700 hover:text-yt duration-500 max-w-fit flex flex-row items-center justify-center">
+                            <button onClick={() => handleScroll("trailer")} className="p-2 border-2 border-yt bg-warmPurp-700 rounded-full text-yt text-[50px] hover:bg-yt hover:text-warmPurp-700 hover:border-warmPurp-700 duration-500 max-w-fit flex flex-row items-center justify-center">
                                 <FaPlay/>
                                 <div>Watch Trailer</div>
                             </button>
@@ -114,7 +129,7 @@ export default function Homepage() {
                     <iframe className="lazy player-ratio" width="1000" height="500" src="" data-src="https://www.youtube.com/embed/S3xAeTmsJfg?si=IEV-DkBDKxXMNaJB" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
                     <div>You play as a fallen ninja, the last survivor of your clan after they were massacred in a brutal war (ikusa) instigated by a tyrannical shogun overlord in Warring States period Japan. Stripped of everything you held dear, you’re haunted by the loss and determined to bring justice to those responsible. In search of purpose and peace, you visit a secluded temple to offer prayers for strength and guidance. But as you kneel, memories of your family drive you to a new resolve: you won’t find peace until the shogun is defeated, and your family’s legacy is reclaimed. </div>
                 </section>
-                <section id="team" className="p-10 bg-warmPurp-600 z-10 text-yt">
+                <section id="team" className="p-10 flex flex-col justify-center bg-warmPurp-600 z-10 text-yt min-h-screen">
                     <Title titleText="MEET THE TEAM" />
                     <div className="flex flex-row flex-wrap place-content-around">
                         <Person
@@ -130,7 +145,7 @@ export default function Homepage() {
                         />
                         <Person
                             name="Massimo Bottari"
-                            year={2026}
+                            year={2027}
                             major="Computer Science"
                             imgLink="https://media-be.chewy.com/wp-content/uploads/2024/07/08103649/facts-about-ferrets-1024x615.jpg"
                             roles={["Code", "Level Design"]}
@@ -141,7 +156,7 @@ export default function Homepage() {
                         />
                         <Person
                             name="Lance Haugh"
-                            year={2026}
+                            year={2027}
                             major="Computer Science"
                             imgLink="https://media-be.chewy.com/wp-content/uploads/2024/07/08103649/facts-about-ferrets-1024x615.jpg"
                             roles={["Code", "Level Design"]}
@@ -149,33 +164,59 @@ export default function Homepage() {
                         />
                         <Person
                             name="Boston-Blue Giovannini"
-                            year={2026}
+                            year={2027}
                             major="Computer Science"
                             imgLink="https://media-be.chewy.com/wp-content/uploads/2024/07/08103649/facts-about-ferrets-1024x615.jpg"
-                            roles={["Code", "Concept Design"]}
-                            links={["https://github.com/untitled-Terran"]}
+                            roles={["Code", "UI", "Videographer"]}
+                            links={["https://github.com/untitled-Terran", "https://www.linkedin.com/in/bostonquinn/"]}
                         />
                     </div>
                 </section>
 
-                <section id="composer" className="min-h-screen bg-coolPurp-700 z-10 text-yt">
+                <section id="composer" className="flex flex-col justify-center min-h-screen bg-coolPurp-700 z-10 text-yt">
                     <Title titleText="OUR COMPOSER" />
                     <div className="flex flex-col justify-center items-center">
                         <iframe className="rounded-sm max-w-[700px]" src="https://open.spotify.com/embed/track/3fxzqmi2j5iXCBYQK4T6EL?utm_source=generator" width="100%" height="152" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                        <Person
-                            name="Marc Yu"
-                            year={2}
-                            major=""
-                            imgLink="https://marcyumusic.com/static/media/marc_yu.2aa35e4a782d9a8ef23a.jpeg"
-                            roles={["Music", "SFX"]}
-                            links={["https://www.wavyrn.com", "https://www.marcyumusic.com"]}
-                        />
+                        <div className="flex flex-row flex-wrap place-content-around">
+                            <Person
+                                name="Marc Yu"
+                                year={2}
+                                major=""
+                                imgLink="https://marcyumusic.com/static/media/marc_yu.2aa35e4a782d9a8ef23a.jpeg"
+                                roles={["Audio Supervisor", "Composer"]}
+                                links={["https://www.wavyrn.com", "https://www.marcyumusic.com"]}
+                            />
+                            <Person
+                                name="Neil Small"
+                                year={2}
+                                major=""
+                                imgLink="https://marcyumusic.com/static/media/marc_yu.2aa35e4a782d9a8ef23a.jpeg"
+                                roles={["Sound Designer"]}
+                                links={["https://www.wavyrn.com"]}
+                            />
+                            <Person
+                                name="Julian Cabrera"
+                                year={2}
+                                major=""
+                                imgLink="https://marcyumusic.com/static/media/marc_yu.2aa35e4a782d9a8ef23a.jpeg"
+                                roles={["Sound Designer"]}
+                                links={["https://www.wavyrn.com"]}
+                            />
+                            <Person
+                                name="Ananta Arora"
+                                year={2}
+                                major=""
+                                imgLink="https://marcyumusic.com/static/media/marc_yu.2aa35e4a782d9a8ef23a.jpeg"
+                                roles={["Studio Manager"]}
+                                links={["https://www.wavyrn.com"]}
+                            />
+                        </div>
                     </div>
                 </section>
                 <section id="gamePlay"
                     className="z-10 p-10 flex flex-col justify-center items-center min-h-screen bg-coolPurp-700">
                     <div className="p-5">
-                        <iframe src="https://itch.io/embed-upload/12161410?color=885d9a" width="1280" height="760"><a href="https://shuriken-saga.itch.io/shuriken-saga">Play Shuriken Saga on itch.io</a></iframe>
+                        {/* <iframe src="https://itch.io/embed-upload/12161410?color=885d9a" width="1280" height="760"><a href="https://shuriken-saga.itch.io/shuriken-saga">Play Shuriken Saga on itch.io</a></iframe> */}
                     </div>
                 </section>
             </div>

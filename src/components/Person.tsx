@@ -25,7 +25,7 @@ const Person = ({ name, imgLink, roles, links, year, major }: PersonProps) => {
             />
 
             {/* Display Name */}
-            <div className="font-bold text-2xl">{name}</div>
+            <div className="font-bold text-2xl text-center">{name}</div>
             
             {/* Background */}
             <div className="italic">Tufts University {year}</div>
