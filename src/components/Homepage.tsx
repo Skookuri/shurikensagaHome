@@ -19,6 +19,9 @@ import riverImg from "/src/images/art_large_water.png";
 
 import massimo from "/src/images/massimo.jpg";
 import alyssa from "/src/images/alyssa.png";
+import lance from "/src/images/lance.jpg";
+import ananta from "/src/images/ananta.jpg";
+import julian from "/src/images/julian.jpg";
 
 export default function Homepage() {
     const sectionNames = ["HOME", "TRAILER", "MEET THE TEAM", "OUR COMPOSER", "PLAY GAME"];
@@ -163,7 +166,7 @@ export default function Homepage() {
                             name="Lance Haugh"
                             year={2027}
                             major="Computer Science"
-                            imgLink="https://media-be.chewy.com/wp-content/uploads/2024/07/08103649/facts-about-ferrets-1024x615.jpg"
+                            imgLink={lance}
                             roles={["Code", "Level Design"]}
                             links={["https://github.com/lhaugh01"]}
                         />
@@ -203,7 +206,7 @@ export default function Homepage() {
                                 name="Julian Cabrera"
                                 year={2}
                                 major=""
-                                imgLink="https://marcyumusic.com/static/media/marc_yu.2aa35e4a782d9a8ef23a.jpeg"
+                                imgLink={julian}
                                 roles={["Sound Designer"]}
                                 links={["https://www.wavyrn.com"]}
                             />
@@ -211,7 +214,7 @@ export default function Homepage() {
                                 name="Ananta Arora"
                                 year={2}
                                 major=""
-                                imgLink="https://marcyumusic.com/static/media/marc_yu.2aa35e4a782d9a8ef23a.jpeg"
+                                imgLink={ananta}
                                 roles={["Studio Manager"]}
                                 links={["https://www.wavyrn.com"]}
                             />
