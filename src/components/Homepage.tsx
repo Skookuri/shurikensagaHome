@@ -8,6 +8,7 @@ import Gallery from "./Gallery";
 import { FaPlay } from "react-icons/fa";
 import LazyLoad from "vanilla-lazyload";
 import logoImg from "/src/images/logo.png";
+// import logoImg2 from "/src/images/logo2.png";
 // import bgImg from "/src/images/art_large_background.png"
 // import flowersImg from "/src/images/art_large_flowers.png" 
 // import mtnsImg from "/src/images/art_large_mountains.png"
@@ -142,7 +143,7 @@ export default function Homepage() {
                     <div className="flex flex-row flex-wrap place-content-around">
                         <Person
                             name="Alyssa Williams"
-                            year={2025}
+                            background="Tufts University 2025"
                             major="Computer Science / CBS"
                             imgLink={alyssa}
                             roles={["Art", "Code", "Website", "Project Management"]}
@@ -153,7 +154,7 @@ export default function Homepage() {
                         />
                         <Person
                             name="Massimo Bottari"
-                            year={2027}
+                            background="Tufts University 2027"
                             major="Computer Science"
                             imgLink={massimo}
                             roles={["Code", "Level Design"]}
@@ -164,7 +165,7 @@ export default function Homepage() {
                         />
                         <Person
                             name="Lance Haugh"
-                            year={2027}
+                            background="Tufts University 2027"
                             major="Computer Science"
                             imgLink={lance}
                             roles={["Code", "Level Design"]}
@@ -172,7 +173,7 @@ export default function Homepage() {
                         />
                         <Person
                             name="Boston-Blue Giovannini"
-                            year={2027}
+                            background="Tufts University 2027"
                             major="Computer Science"
                             imgLink="https://media-be.chewy.com/wp-content/uploads/2024/07/08103649/facts-about-ferrets-1024x615.jpg"
                             roles={["Code", "UI", "Videographer"]}
@@ -188,7 +189,7 @@ export default function Homepage() {
                         <div className="flex flex-row flex-wrap place-content-around">
                             <Person
                                 name="Marc Yu"
-                                year={2}
+                                background="Wavyrn Co-Founder"
                                 major=""
                                 imgLink="https://marcyumusic.com/static/media/marc_yu.2aa35e4a782d9a8ef23a.jpeg"
                                 roles={["Audio Supervisor", "Composer"]}
@@ -196,15 +197,15 @@ export default function Homepage() {
                             />
                             <Person
                                 name="Neil Small"
-                                year={2}
+                                background="Berklee College of Music 2025"
                                 major=""
-                                imgLink="https://marcyumusic.com/static/media/marc_yu.2aa35e4a782d9a8ef23a.jpeg"
+                                imgLink="https://media-be.chewy.com/wp-content/uploads/2024/07/08103649/facts-about-ferrets-1024x615.jpg"
                                 roles={["Sound Designer"]}
                                 links={["https://www.wavyrn.com"]}
                             />
                             <Person
                                 name="Julian Cabrera"
-                                year={2}
+                                background="Wavyrn Sound Designer"
                                 major=""
                                 imgLink={julian}
                                 roles={["Sound Designer"]}
@@ -212,7 +213,7 @@ export default function Homepage() {
                             />
                             <Person
                                 name="Ananta Arora"
-                                year={2}
+                                background="Wavyrn Co-Founder"
                                 major=""
                                 imgLink={ananta}
                                 roles={["Studio Manager"]}
@@ -221,8 +222,7 @@ export default function Homepage() {
                         </div>
                     </div>
                 </section>
-                <section id="gamePlay"
-                    className="z-10 p-10 flex flex-col justify-center items-center min-h-screen bg-coolPurp-700">
+                <section id="gamePlay" className="z-10 p-10 flex flex-col justify-center items-center min-h-screen bg-coolPurp-700">
                     <div className="p-5">
                         <iframe src="https://itch.io/embed-upload/12224310?color=724789" width="1280" height="760"><a href="https://shuriken-saga.itch.io/shuriken-saga">Play Shuriken Saga on itch.io</a></iframe>
                     </div>
