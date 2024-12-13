@@ -83,8 +83,8 @@ export default function Homepage() {
     return (
         <>
             <NavBar sectionNames={sectionNames} sectionIDs={sectionIDs} />
-            <div className="flex flex-col justify-center bg-coolPurp-700">
-                <section id="hero" className="relative p-10 flex flex-col justify-center items-center min-h-screen bg-coolPurp-700 overflow-hidden bg-gradient-to-b from-warmPurp-700 via-transparent to-transparent">
+            <div className="flex flex-col justify-center bg-coolPurp-700 w-screen m-0 overflow-hidden">
+                <section id="hero" className="min-w-screen relative p-10 flex flex-col justify-center items-center min-h-screen bg-coolPurp-700 overflow-hidden bg-gradient-to-b from-warmPurp-700 via-transparent to-transparent">
                     <img
                         ref={moonRef}
                         className="absolute top-48 -left-96 w-full h-auto z-1"
@@ -133,63 +133,63 @@ export default function Homepage() {
                         </div>
                     </div>  
                 </section>
-                <section id="trailer" className="p-10 flex flex-col justify-center items-center min-h-screen bg-warmPurp-500 text-lg text-yt">
+                <section id="trailer" className="w-screen p-10 flex flex-col justify-center items-center min-h-screen bg-warmPurp-500 text-lg text-yt">
                     <iframe className="lazy player-ratio" width="1000" height="500" src="" data-src="https://www.youtube.com/embed/S3xAeTmsJfg?si=IEV-DkBDKxXMNaJB" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
                     <div>You play as a fallen ninja, the last survivor of your clan after they were massacred in a brutal war (ikusa) instigated by a tyrannical shogun overlord in Warring States period Japan. Stripped of everything you held dear, you’re haunted by the loss and determined to bring justice to those responsible. In search of purpose and peace, you visit a secluded temple to offer prayers for strength and guidance. But as you kneel, memories of your family drive you to a new resolve: you won’t find peace until the shogun is defeated, and your family’s legacy is reclaimed. </div>
                 </section>
                 <section id="team" className="p-10 flex flex-col justify-center items-center bg-warmPurp-600 z-10 text-yt min-h-screen">
                     <Title titleText="MEET THE TEAM" />
-                    <div className="flex flex-row">
-                    <div className="flex flex-col flex-wrap place-content-around">
-                        <Person
-                            name="Alyssa Williams"
-                            background="Tufts University 2025"
-                            major="Computer Science / CBS"
-                            imgLink={alyssa}
-                            roles={["Art", "Code", "Website", "Project Management"]}
-                            links={[
-                                "https://www.linkedin.com/in/wiriamuzu/",
-                                "https://github.com/skookuri",
-                            ]}
-                        />
-                        <Person
-                            name="Massimo Bottari"
-                            background="Tufts University 2027"
-                            major="Computer Science"
-                            imgLink={massimo}
-                            roles={["Code", "Level Design"]}
-                            links={[
-                                "https://www.linkedin.com/in/massimo-bottari-39339a2aa/",
-                                "https://github.com/Masmooo",
-                            ]}
-                        />
-                    </div>
-                    <Gallery/>
-                    <div className="flex flex-col flex-wrap place-content-around">
-                        <Person
-                            name="Lance Haugh"
-                            background="Tufts University 2027"
-                            major="Computer Science"
-                            imgLink={lance}
-                            roles={["Code", "Level Design"]}
-                            links={["https://github.com/lhaugh01"]}
-                        />
-                        <Person
-                            name="Boston-Blue Giovannini"
-                            background="Tufts University 2027"
-                            major="Computer Science"
-                            imgLink="https://media-be.chewy.com/wp-content/uploads/2024/07/08103649/facts-about-ferrets-1024x615.jpg"
-                            roles={["Code", "UI", "Videographer"]}
-                            links={["https://github.com/untitled-Terran", "https://www.linkedin.com/in/bostonquinn/"]}
-                        />
-                    </div>
+                    <div className="flex flex-row justify-center items-center">
+                        <div className="flex flex-col flex-wrap place-content-around">
+                            <Person
+                                name="Alyssa Williams"
+                                background="Tufts University 2025"
+                                major="Computer Science / CBS"
+                                imgLink={alyssa}
+                                roles={["Art", "Code", "Website", "Project Management"]}
+                                links={[
+                                    "https://www.linkedin.com/in/wiriamuzu/",
+                                    "https://github.com/skookuri",
+                                ]}
+                            />
+                            <Person
+                                name="Massimo Bottari"
+                                background="Tufts University 2027"
+                                major="Computer Science"
+                                imgLink={massimo}
+                                roles={["Code", "Level Design"]}
+                                links={[
+                                    "https://www.linkedin.com/in/massimo-bottari-39339a2aa/",
+                                    "https://github.com/Masmooo",
+                                ]}
+                            />
+                        </div>
+                        <Gallery/>
+                        <div className="flex flex-col flex-wrap place-content-around">
+                            <Person
+                                name="Lance Haugh"
+                                background="Tufts University 2027"
+                                major="Computer Science"
+                                imgLink={lance}
+                                roles={["Code", "Level Design"]}
+                                links={["https://github.com/lhaugh01"]}
+                            />
+                            <Person
+                                name="Boston-Blue Giovannini"
+                                background="Tufts University 2027"
+                                major="Computer Science"
+                                imgLink="https://media-be.chewy.com/wp-content/uploads/2024/07/08103649/facts-about-ferrets-1024x615.jpg"
+                                roles={["Code", "UI", "Videographer"]}
+                                links={["https://github.com/untitled-Terran", "https://www.linkedin.com/in/bostonquinn/"]}
+                            />
+                        </div>
                     </div>
                 </section>
 
-                <section id="composer" className="p-10 flex flex-col justify-center min-h-screen bg-coolPurp-700 z-10 text-yt">
+                <section id="composer" className="p-10 flex flex-col justify-center items-center min-h-screen bg-coolPurp-700 z-10 text-yt">
                     <Title titleText="MUSIC" />
                     <div className="flex flex-col justify-center items-center">
-                        <iframe className="rounded-sm max-w-[700px]" src="https://open.spotify.com/embed/track/3fxzqmi2j5iXCBYQK4T6EL?utm_source=generator" width="100%" height="152" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                        <iframe className="rounded-sm w-[300px] h-auto" src="https://open.spotify.com/embed/track/3fxzqmi2j5iXCBYQK4T6EL?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                         <div className="flex flex-row flex-wrap place-content-around">
                             <Person
                                 name="Marc Yu"
