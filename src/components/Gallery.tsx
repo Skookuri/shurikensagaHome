@@ -31,7 +31,7 @@ const Gallery = () => {
   };
 
   return (
-    <div className="gallery-container relative text-center overflow-hidden rounded-xl">
+    <div className="gallery-container relative text-center w-[700px] aspect-[4/3] overflow-hidden rounded-xl">
       <img
         src={imgArray[currentIndex]}
         alt={`Screenshot ${currentIndex + 1}`}

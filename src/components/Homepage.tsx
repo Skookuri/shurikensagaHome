@@ -137,10 +137,10 @@ export default function Homepage() {
                     <iframe className="lazy player-ratio" width="1000" height="500" src="" data-src="https://www.youtube.com/embed/S3xAeTmsJfg?si=IEV-DkBDKxXMNaJB" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
                     <div>You play as a fallen ninja, the last survivor of your clan after they were massacred in a brutal war (ikusa) instigated by a tyrannical shogun overlord in Warring States period Japan. Stripped of everything you held dear, you’re haunted by the loss and determined to bring justice to those responsible. In search of purpose and peace, you visit a secluded temple to offer prayers for strength and guidance. But as you kneel, memories of your family drive you to a new resolve: you won’t find peace until the shogun is defeated, and your family’s legacy is reclaimed. </div>
                 </section>
-                <section id="team" className="p-10 flex flex-col justify-center bg-warmPurp-600 z-10 text-yt min-h-screen">
+                <section id="team" className="p-10 flex flex-col justify-center items-center bg-warmPurp-600 z-10 text-yt min-h-screen">
                     <Title titleText="MEET THE TEAM" />
-                    <Gallery/>
-                    <div className="flex flex-row flex-wrap place-content-around">
+                    <div className="flex flex-row">
+                    <div className="flex flex-col flex-wrap place-content-around">
                         <Person
                             name="Alyssa Williams"
                             background="Tufts University 2025"
@@ -163,6 +163,9 @@ export default function Homepage() {
                                 "https://github.com/Masmooo",
                             ]}
                         />
+                    </div>
+                    <Gallery/>
+                    <div className="flex flex-col flex-wrap place-content-around">
                         <Person
                             name="Lance Haugh"
                             background="Tufts University 2027"
@@ -180,10 +183,11 @@ export default function Homepage() {
                             links={["https://github.com/untitled-Terran", "https://www.linkedin.com/in/bostonquinn/"]}
                         />
                     </div>
+                    </div>
                 </section>
 
                 <section id="composer" className="p-10 flex flex-col justify-center min-h-screen bg-coolPurp-700 z-10 text-yt">
-                    <Title titleText="OUR COMPOSER" />
+                    <Title titleText="MUSIC" />
                     <div className="flex flex-col justify-center items-center">
                         <iframe className="rounded-sm max-w-[700px]" src="https://open.spotify.com/embed/track/3fxzqmi2j5iXCBYQK4T6EL?utm_source=generator" width="100%" height="152" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                         <div className="flex flex-row flex-wrap place-content-around">
