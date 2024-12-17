@@ -23,6 +23,8 @@ import alyssa from "/src/images/alyssa.png";
 import lance from "/src/images/lance.jpg";
 import ananta from "/src/images/ananta.jpg";
 import julian from "/src/images/julian.jpg";
+import boston from "/src/images/boston.jpg";
+import neil from "/src/images/neil.png";
 
 export default function Homepage() {
     const sectionNames = ["HOME", "TRAILER", "MEET THE TEAM", "OUR COMPOSER", "PLAY GAME"];
@@ -134,7 +136,7 @@ export default function Homepage() {
                     </div>  
                 </section>
                 <section id="trailer" className="w-screen p-10 flex flex-col justify-center items-center min-h-screen bg-warmPurp-500 text-lg text-yt">
-                    <iframe className="lazy player-ratio" width="1000" height="500" src="" data-src="https://www.youtube.com/embed/S3xAeTmsJfg?si=IEV-DkBDKxXMNaJB" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+                    <iframe className="lazy player-ratio" width="1000" height="500" src="https://www.youtube.com/embed/Ikb7gHcYW-8?si=u06KI5IkjyTGg8DE" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
                     <div>You play as a fallen ninja, the last survivor of your clan after they were massacred in a brutal war (ikusa) instigated by a tyrannical shogun overlord in Warring States period Japan. Stripped of everything you held dear, you’re haunted by the loss and determined to bring justice to those responsible. In search of purpose and peace, you visit a secluded temple to offer prayers for strength and guidance. But as you kneel, memories of your family drive you to a new resolve: you won’t find peace until the shogun is defeated, and your family’s legacy is reclaimed. </div>
                 </section>
                 <section id="team" className="p-10 flex flex-col justify-center items-center bg-warmPurp-600 z-10 text-yt min-h-screen">
@@ -178,7 +180,7 @@ export default function Homepage() {
                                 name="Boston-Blue Giovannini"
                                 background="Tufts University 2027"
                                 major="Computer Science"
-                                imgLink="https://media-be.chewy.com/wp-content/uploads/2024/07/08103649/facts-about-ferrets-1024x615.jpg"
+                                imgLink={boston}
                                 roles={["Code", "UI", "Videographer"]}
                                 links={["https://github.com/untitled-Terran", "https://www.linkedin.com/in/bostonquinn/"]}
                             />
@@ -203,7 +205,7 @@ export default function Homepage() {
                                 name="Neil Small"
                                 background="Berklee College of Music 2025"
                                 major=""
-                                imgLink="https://media-be.chewy.com/wp-content/uploads/2024/07/08103649/facts-about-ferrets-1024x615.jpg"
+                                imgLink={neil}
                                 roles={["Sound Designer"]}
                                 links={["https://www.wavyrn.com"]}
                             />
@@ -229,6 +231,7 @@ export default function Homepage() {
                 <section id="gamePlay" className="z-10 p-10 flex flex-col justify-center items-center min-h-screen bg-coolPurp-700">
                     <div className="p-5">
                         <iframe src="https://itch.io/embed-upload/12224310?color=724789" width="1280" height="760"><a href="https://shuriken-saga.itch.io/shuriken-saga">Play Shuriken Saga on itch.io</a></iframe>
+                        <iframe src="https://itch.io/embed-upload/12285970?color=724789" width="1280" height="760"><a href="https://shuriken-saga.itch.io/shuriken-saga">Play Shuriken Saga on itch.io</a></iframe>
                     </div>
                 </section>
             </div>
