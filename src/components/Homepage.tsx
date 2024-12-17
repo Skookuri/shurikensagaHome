@@ -191,7 +191,7 @@ export default function Homepage() {
                 <section id="composer" className="p-10 flex flex-col justify-center items-center min-h-screen bg-coolPurp-700 z-10 text-yt">
                     <Title titleText="MUSIC" />
                     <div className="flex flex-col justify-center items-center">
-                        <iframe className="rounded-sm w-[300px] h-auto" src="https://open.spotify.com/embed/track/3fxzqmi2j5iXCBYQK4T6EL?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                        {/* <iframe className="rounded-sm w-[300px] h-auto" src="https://open.spotify.com/embed/track/3fxzqmi2j5iXCBYQK4T6EL?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> */}
                         <div className="flex flex-row flex-wrap place-content-around">
                             <Person
                                 name="Marc Yu"
