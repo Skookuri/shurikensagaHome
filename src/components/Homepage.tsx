@@ -8,6 +8,10 @@ import Gallery from "./Gallery";
 import { FaPlay } from "react-icons/fa";
 import LazyLoad from "vanilla-lazyload";
 import logoImg from "/src/images/logo.png";
+import AudioPlayer from "./AudioPlayer";
+import overworld from "/src/music/Music.Homeworld.Layer1-Overworld.wav"
+import shadow from "/src/music/Music.Homeworld.Layer2-Shadow.wav"
+import dungeon from "/src/music/Music.Dungeon.wav"
 // import logoImg2 from "/src/images/logo2.png";
 // import bgImg from "/src/images/art_large_background.png"
 // import flowersImg from "/src/images/art_large_flowers.png" 
@@ -127,7 +131,7 @@ export default function Homepage() {
                             className="z-6"
                         />
                         <div className="flex flex-row gap-6 z-7 -mt-20">
-                            <button onClick={() => handleScroll("gamePlay")} className="p-6 border-2 border-yt bg-yt rounded-full text-warmPurp-700 text-[50px] hover:bg-warmPurp-700 hover:text-yt duration-500 max-w-fit">Play Now</button>
+                            <button onClick={() => handleScroll("gamePlay")} className="p-6 border-2 border-yt bg-[#c622ca] rounded-full text-yt text-[50px] hover:bg-yt hover:text-warmPurp-700 duration-500 max-w-fit">Play Now</button>
                             <button onClick={() => handleScroll("trailer")} className="p-6 border-2 border-yt bg-warmPurp-700 rounded-full text-yt text-[50px] hover:bg-yt hover:text-warmPurp-700 hover:border-warmPurp-700 duration-500 max-w-fit flex flex-row items-center justify-center">
                                 <FaPlay/>
                                 <div>Watch Trailer</div>
@@ -135,9 +139,9 @@ export default function Homepage() {
                         </div>
                     </div>  
                 </section>
-                <section id="trailer" className="w-screen p-10 flex flex-col justify-center items-center min-h-screen bg-warmPurp-500 text-lg text-yt">
+                <section id="trailer" className="w-screen p-10 flex flex-row justify-center items-center min-h-screen bg-warmPurp-500 text-lg text-yt">
+                    <div className="text-3xl max-w-[600px]">You play as a <span className="text-[#f759f7] font-bold">fallen ninja,</span> the last survivor of your clan after they were massacred in a brutal war (ikusa) instigated by a tyrannical shogun overlord in Warring States period Japan. Stripped of everything you held dear, you’re haunted by the loss and determined to bring justice to those responsible. In search of purpose and peace, you visit a secluded temple to offer prayers for strength and guidance. But as you kneel, memories of your family drive you to a new resolve: you won’t find peace until the shogun is defeated, and your family’s legacy is reclaimed. </div>
                     <iframe className="lazy player-ratio" width="1000" height="500" src="https://www.youtube.com/embed/Ikb7gHcYW-8?si=u06KI5IkjyTGg8DE" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
-                    <div>You play as a fallen ninja, the last survivor of your clan after they were massacred in a brutal war (ikusa) instigated by a tyrannical shogun overlord in Warring States period Japan. Stripped of everything you held dear, you’re haunted by the loss and determined to bring justice to those responsible. In search of purpose and peace, you visit a secluded temple to offer prayers for strength and guidance. But as you kneel, memories of your family drive you to a new resolve: you won’t find peace until the shogun is defeated, and your family’s legacy is reclaimed. </div>
                 </section>
                 <section id="team" className="p-10 flex flex-col justify-center items-center bg-warmPurp-600 z-10 text-yt min-h-screen">
                     <Title titleText="MEET THE TEAM" />
@@ -189,10 +193,24 @@ export default function Homepage() {
                 </section>
 
                 <section id="composer" className="p-10 flex flex-col justify-center items-center min-h-screen bg-coolPurp-700 z-10 text-yt">
-                    <Title titleText="MUSIC AND SOUND DESIGN TEAM" />
+                    <Title titleText="MUSIC AND SOUND TEAM" />
                     <div className="flex flex-col justify-center items-center">
                         {/* <iframe className="rounded-sm w-[300px] h-auto" src="https://open.spotify.com/embed/track/3fxzqmi2j5iXCBYQK4T6EL?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> */}
-                        <div className="flex flex-row flex-wrap place-content-around">
+                        <div className="flex flex-row items-center justify-center text-center">
+                            <div>
+                                <div>Homeworld- Overworld</div>
+                                <AudioPlayer audioSrc={overworld} />
+                            </div>
+                            <div>
+                                <div>Homeworld- Shadow</div>
+                                <AudioPlayer audioSrc={shadow} />
+                            </div>
+                            <div>
+                                <div>Dungeon</div>
+                                <AudioPlayer audioSrc={dungeon} />
+                            </div>
+                        </div>
+                        <div className="flex flex-row flex-wrap place-content-around gap-2">
                             <Person
                                 name="Marc Yu"
                                 background="Wavyrn Co-Founder"
@@ -228,12 +246,33 @@ export default function Homepage() {
                         </div>
                     </div>
                 </section>
-                <section id="gamePlay" className="z-10 p-10 flex flex-col justify-center items-center min-h-screen bg-coolPurp-700">
+                <section id="gamePlay" className="z-10 p-10 flex flex-col justify-center items-center min-h-screen bg-coolPurp-500">
                     <div className="p-5">
-                        {/* <iframe src="https://itch.io/embed-upload/12224310?color=724789" width="1280" height="760"><a href="https://shuriken-saga.itch.io/shuriken-saga">Play Shuriken Saga on itch.io</a></iframe> */}
                         <iframe src="https://itch.io/embed-upload/12285970?color=724789" width="1280" height="760"><a href="https://shuriken-saga.itch.io/shuriken-saga">Play Shuriken Saga on itch.io</a></iframe>
                     </div>
                 </section>
+                <footer className="text-yt p-10 bg-warmPurp-600 max-h-[160px]">
+                    <div className="footerInfo">
+                        <div className="text-2xl">ShurikenSaga</div>
+                        <div className="flex flex-row gap-2.5">
+                            <div>
+                                <div>Massimo Bottari</div>
+                                <div>Boston Giovannini</div>
+                            </div>
+                            <div>
+                                <div>Alyssa Williams</div>
+                                <div>Lance Haugh</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="footerInfo text-center text-xl">&copy; 2024 ShurikenSaga</div>
+                    <div className="footerInfo flex flex-row text-xl;">
+                        <i className='bx bxl-instagram-alt'></i>
+                        <i className='bx bxl-tiktok'></i>
+                        <i className='bx bxl-facebook-circle' ></i>
+                        <i className='bx bxl-twitter'></i>
+                    </div>
+                </footer>
             </div>
         </>
     );
