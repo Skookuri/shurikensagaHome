@@ -27,7 +27,7 @@ import boston from "/src/images/boston.jpg";
 import neil from "/src/images/neil.png";
 
 export default function Homepage() {
-    const sectionNames = ["HOME", "TRAILER", "MEET THE TEAM", "MUSIC AND SOUND DESIGN TEAM", "PLAY GAME"];
+    const sectionNames = ["HOME", "TRAILER", "MEET THE TEAM", "MUSIC AND SOUND", "PLAY GAME"];
     const sectionIDs = ["hero", "trailer", "team", "composer", "gamePlay"];
 
     const skyRef = useRef<HTMLImageElement>(null);
@@ -127,8 +127,8 @@ export default function Homepage() {
                             className="z-6"
                         />
                         <div className="flex flex-row gap-6 z-7 -mt-20">
-                            <button onClick={() => handleScroll("gamePlay")} className="p-2 border-2 border-yt bg-yt rounded-full text-warmPurp-700 text-[50px] hover:bg-warmPurp-700 hover:text-yt duration-500 max-w-fit">Play Now</button>
-                            <button onClick={() => handleScroll("trailer")} className="p-2 border-2 border-yt bg-warmPurp-700 rounded-full text-yt text-[50px] hover:bg-yt hover:text-warmPurp-700 hover:border-warmPurp-700 duration-500 max-w-fit flex flex-row items-center justify-center">
+                            <button onClick={() => handleScroll("gamePlay")} className="p-6 border-2 border-yt bg-yt rounded-full text-warmPurp-700 text-[50px] hover:bg-warmPurp-700 hover:text-yt duration-500 max-w-fit">Play Now</button>
+                            <button onClick={() => handleScroll("trailer")} className="p-6 border-2 border-yt bg-warmPurp-700 rounded-full text-yt text-[50px] hover:bg-yt hover:text-warmPurp-700 hover:border-warmPurp-700 duration-500 max-w-fit flex flex-row items-center justify-center">
                                 <FaPlay/>
                                 <div>Watch Trailer</div>
                             </button>
@@ -230,7 +230,7 @@ export default function Homepage() {
                 </section>
                 <section id="gamePlay" className="z-10 p-10 flex flex-col justify-center items-center min-h-screen bg-coolPurp-700">
                     <div className="p-5">
-                        <iframe src="https://itch.io/embed-upload/12224310?color=724789" width="1280" height="760"><a href="https://shuriken-saga.itch.io/shuriken-saga">Play Shuriken Saga on itch.io</a></iframe>
+                        {/* <iframe src="https://itch.io/embed-upload/12224310?color=724789" width="1280" height="760"><a href="https://shuriken-saga.itch.io/shuriken-saga">Play Shuriken Saga on itch.io</a></iframe> */}
                         <iframe src="https://itch.io/embed-upload/12285970?color=724789" width="1280" height="760"><a href="https://shuriken-saga.itch.io/shuriken-saga">Play Shuriken Saga on itch.io</a></iframe>
                     </div>
                 </section>
