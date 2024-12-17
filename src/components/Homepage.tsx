@@ -27,7 +27,7 @@ import boston from "/src/images/boston.jpg";
 import neil from "/src/images/neil.png";
 
 export default function Homepage() {
-    const sectionNames = ["HOME", "TRAILER", "MEET THE TEAM", "OUR COMPOSER", "PLAY GAME"];
+    const sectionNames = ["HOME", "TRAILER", "MEET THE TEAM", "MUSIC AND SOUND DESIGN TEAM", "PLAY GAME"];
     const sectionIDs = ["hero", "trailer", "team", "composer", "gamePlay"];
 
     const skyRef = useRef<HTMLImageElement>(null);
@@ -189,7 +189,7 @@ export default function Homepage() {
                 </section>
 
                 <section id="composer" className="p-10 flex flex-col justify-center items-center min-h-screen bg-coolPurp-700 z-10 text-yt">
-                    <Title titleText="MUSIC" />
+                    <Title titleText="MUSIC AND SOUND DESIGN TEAM" />
                     <div className="flex flex-col justify-center items-center">
                         {/* <iframe className="rounded-sm w-[300px] h-auto" src="https://open.spotify.com/embed/track/3fxzqmi2j5iXCBYQK4T6EL?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> */}
                         <div className="flex flex-row flex-wrap place-content-around">
